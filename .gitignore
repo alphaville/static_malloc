@@ -1,0 +1,4 @@
+.dep.inc
+.vscode/
+build/
+Makefile
