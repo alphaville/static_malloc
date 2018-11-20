@@ -94,4 +94,26 @@ Cons:
 
 - Need to know how much memory the program needs, before it runs
 - Freeing memory is not possible
-- Reusing memory is difficult
+- Reusing memory is 
+
+## Installation
+
+**No installation** is necessary!
+
+For example, to compile `main.c`, use
+
+```c
+gcc main.c
+```
+
+## Unit tests
+
+To run the tests, you first need to run `config.sh` (requires `cmake`) and then enter `build` and run `make all test`.
+
+Run the following:
+
+```
+./config.sh
+cd build
+make all test
+```
