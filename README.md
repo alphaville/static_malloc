@@ -29,7 +29,7 @@ For example:
 ```
 
 You may define **any** datatype to be allocated.
- =
+ 
 For example, if you have some datatype called `my_datatype_t`, and you need to pre-allocate memory of size `123000`, you only need to define 
 
 ```c
@@ -67,11 +67,10 @@ STATIC_MALLOC_DFN(char)
 Here is a complete example
 
 ```c
-#include "../include/static_malloc.h"
-#include <stdio.h>
+#include "include/static_malloc.h"
 
-#if STALLOC_ACTIVE_TYPE(char)
-STATIC_MALLOC_DFN(char)
+#if STALLOC_ACTIVE_TYPE(char)  // if static_malloc_len_char is defined
+STATIC_MALLOC_DFN(char)        // define STATIC_MALLOC(char)
 #endif
 
 int main(void)
@@ -104,6 +103,12 @@ For example, to compile `main.c`, use
 
 ```c
 gcc main.c
+```
+
+You only need to include the following line in your file:
+
+```c
+#include "include/static_malloc.h"
 ```
 
 ## Unit tests
